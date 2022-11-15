@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color:  #060714;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    font-size: 15px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.menu li{
+    padding: 20px;
+}
+
+.div-ul, .div-logo, .div-account{
+    width: 33%;
+}
+
+.div-logo{
+    display: flex;
+    align-items: center;
+}
+
+.div-account{
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+
+.myaccount, .footer-myaccount{
+    background-color: #030c8e;
+}
+
+.contact{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 0, 0, 0.0);
+}
+
+.myaccount{
+    background:linear-gradient(to top, #052766cd 5%, #1634aebc 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	text-shadow:0px 1px 0px #283966;
+    font-weight: normal;
+}
+
+.myaccount, .contact{
+    padding: 10px;
+    border-radius: .5rem;
+    font-size: 20px;
+    margin: 1%;
+    font-weight: normal;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+
+.div-ul{
+    color: white;
+    opacity: 0.8;
+    margin-right: 20px;
+}
+
+
+hr{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+.separated-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separated-footer hr{
+    width: 80%;
+}

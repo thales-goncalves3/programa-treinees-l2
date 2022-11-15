@@ -1,6 +1,3 @@
-
-console.log(orientacaoFinalRobo(15, 36, 'FFFFFFFFFFFFFFFFDFETTTTTTTTTTTTTTTT'));
-
 function orientacaoFinalRobo(largura, comprimento, coordenadas){
 
     var orientacaoRobo = {
@@ -14,13 +11,13 @@ function orientacaoFinalRobo(largura, comprimento, coordenadas){
     for(var i = 0; i < coordenadas.length; i++){
         if(xyMaiorIgualAZero(orientacaoRobo) && xMenorQueLargura(orientacaoRobo.x, largura) && yMenorQueComprimento(orientacaoRobo.y, comprimento)){
             if(orientacaoRobo.orientacaoAtual == 'N'){
-                checaPosicaoNorte(orientacaoRobo, coordenadas[i]);
+                checaPosicaoNorte(orientacaoRobo, coordenadas[i], comprimento);
             }else if(orientacaoRobo.orientacaoAtual == 'L'){
-                checaPosicaoLeste(orientacaoRobo, coordenadas[i]);
+                checaPosicaoLeste(orientacaoRobo, coordenadas[i], largura);
             }else if(orientacaoRobo.orientacaoAtual == 'S'){
-                checaPosicaoSul(orientacaoRobo, coordenadas[i]);
+                checaPosicaoSul(orientacaoRobo, coordenadas[i], comprimento);
             }else if(orientacaoRobo.orientacaoAtual == 'O'){
-                checaPosicaoOeste(orientacaoRobo, coordenadas[i]);
+                checaPosicaoOeste(orientacaoRobo, coordenadas[i], largura);
             }
         }    
     }
@@ -33,51 +30,67 @@ function xyMaiorIgualAZero(orientacaoRobo){
     return orientacaoRobo.y >= 0 && orientacaoRobo.x >= 0;
 }
 
-function checaPosicaoNorte(orientacaoRobo, coordenada){
+function checaPosicaoNorte(orientacaoRobo, coordenada, comprimento){
     if(coordenada == 'F'){
-        orientacaoRobo.y = orientacaoRobo.y + 1;
+        if(orientacaoRobo.y < comprimento){
+            orientacaoRobo.y = orientacaoRobo.y + 1;
+        }
     }else if(coordenada == 'D'){
         orientacaoRobo.orientacaoAtual = 'L';
     }else if(coordenada == 'E'){
         orientacaoRobo.orientacaoAtual = 'O';
     }else if(coordenada == 'T'){
-        orientacaoRobo.y = orientacaoRobo.y - 1;
+        if(orientacaoRobo.y > 0){
+            orientacaoRobo.y = orientacaoRobo.y - 1;
+        }
     }
 }
 
-function checaPosicaoSul(orientacaoRobo, coordenada){
+function checaPosicaoSul(orientacaoRobo, coordenada, comprimento){
     if(coordenada == 'F'){
-        orientacaoRobo.y = orientacaoRobo.y - 1;
+        if(orientacaoRobo.y > 0){
+            orientacaoRobo.y = orientacaoRobo.y - 1;
+        }
     }else if(coordenada == 'D'){
         orientacaoRobo.orientacaoAtual = 'O';
     }else if(coordenada == 'E'){
         orientacaoRobo.orientacaoAtual = 'L';
     }else if(coordenada == 'T'){
-        orientacaoRobo.y = orientacaoRobo.y + 1;
+        if(orientacaoRobo.y < comprimento){
+            orientacaoRobo.y = orientacaoRobo.y + 1; 
+        }
     }
 }
 
-function checaPosicaoLeste(orientacaoRobo, coordenada){
+function checaPosicaoLeste(orientacaoRobo, coordenada, largura){
     if(coordenada == 'F'){
-        orientacaoRobo.x = orientacaoRobo.x + 1;
+        if(orientacaoRobo.x < largura){
+            orientacaoRobo.x = orientacaoRobo.x + 1;
+        }
     }else if(coordenada == 'D'){
         orientacaoRobo.orientacaoAtual = 'S';
     }else if(coordenada == 'E'){
         orientacaoRobo.orientacaoAtual = 'N';
     }else if(coordenada == 'T'){
-        orientacaoRobo.x = orientacaoRobo.x - 1;
+        if(orientacaoRobo.x > 0){
+            orientacaoRobo.x = orientacaoRobo.x - 1;
+        }
     }
 }
 
-function checaPosicaoOeste(orientacaoRobo, coordenada){
+function checaPosicaoOeste(orientacaoRobo, coordenada, largura){
     if(coordenada == 'F'){
-        orientacaoRobo.x = orientacaoRobo.x - 1;
+        if(orientacaoRobo.x > 0){
+            orientacaoRobo.x = orientacaoRobo.x - 1;
+        }
     }else if(coordenada == 'D'){
         orientacaoRobo.orientacaoAtual = 'N';
     }else if(coordenada == 'E'){
         orientacaoRobo.orientacaoAtual = 'S';
     }else if(coordenada == 'T'){
-        orientacaoRobo.x = orientacaoRobo.x + 1;
+        if(orientacaoRobo.x < largura){
+            orientacaoRobo.x = orientacaoRobo.x + 1;
+        }
     }
 }
 
