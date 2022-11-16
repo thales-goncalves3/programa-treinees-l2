@@ -3,7 +3,34 @@ let currentItem = 0;
 let items = document.querySelectorAll(".card");
 const maxItems = items.length;
 
-console.log(controls);
+items.forEach((item) =>{
+  item.addEventListener("click", (e) =>{
+    let element = e.target;
+
+    console.log(element);
+
+    while(!element.classList.contains("card")){
+      if(element.parentNode){
+        element = element.parentNode;
+        console.log(element);
+      }
+    }
+
+    
+    items.forEach((item) =>{
+      item.classList.remove("current-card");
+    })
+
+
+    element.classList.add("current-card");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: 'nearest', 
+      inline: 'start'
+    })
+    
+  })
+})
 
 controls.forEach((control) => {
   control.addEventListener("click", (e) => {

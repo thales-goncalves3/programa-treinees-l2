@@ -7,10 +7,15 @@
   align-items: center;
 }
 
-.content-nft h2 {
-  margin: 5%;
+.content-nft h2, .content-nft h3 {
+  margin: 3%;
   font-weight: normal;
-  opacity: 0.4;
+  opacity: 0.5;
+}
+
+.content-nft h3{
+  letter-spacing: 10px;
+  font-size: 0.9em;
 }
 
 .logotypes {
