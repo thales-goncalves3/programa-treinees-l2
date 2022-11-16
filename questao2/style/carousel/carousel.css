@@ -1,106 +1,172 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1 {
-  text-align: center;
-  margin: 1em 0;
-  font-family: sans-serif;
-}
-
-.container {
-  position: relative;
-  padding: 15px;
-  width: 100%;
-}
-
-.gallery-wrapper {
-  overflow-x: auto;
+.card{
+  width: 400px;
   height: 700px;
-}
-
-.arrow-left,
-.arrow-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  bottom: 0;
-  font-size: 20px;
-  line-height: 250px;
-  width: 40px;
-  color: #fff;
-  transition: all 600ms ease-in-out;
-  background: linear-gradient(to left, transparent 0%, black 200%);
-  opacity: 0.1;
-  cursor: pointer;
-  border: none;
-}
-
-.arrow-left:hover,
-.arrow-right:hover {
-  opacity: 1;
-}
-
-.arrow-right {
-  right: 0;
-  left: auto;
-  text-align: right;
-  background: linear-gradient(to right, transparent 0%, black 200%);
-}
-
-.gallery {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 15px;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;  
-  width: 300px;
-  height: 200px;
+  border-radius: 10px;
   flex-shrink: 0;
   transition: all 600ms ease-in-out;
+  border: 1px solid rgba(236, 235, 241, 0.458);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0.5;
 }
 
-.current-item {
+.current-card{
   opacity: 1;
 }
 
-/* This is from w3schools */
-/* 
-  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
-/* Hide scrollbar for Chrome, Safari and Opera */
-.gallery-wrapper::-webkit-scrollbar {
-  display: none;
+.card-image{
+  box-shadow: rgba(25, 2, 124, 0.25) 0px 54px 55px, rgba(25, 2, 124, 0.25) 0px -12px 30px, rgba(25, 2, 124, 0.125) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 90%;
+  height: 70%;
+  margin: 5%;
+  border-radius: 10px;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.gallery-wrapper {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.card-text a{
+  text-shadow: 0px 1px 0px #283966;
+  background: linear-gradient(to bottom, #042460cd 5%, #4b11c7 100%);
+  background-color: #7892c2;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0.6;
 }
 
-.cyan {
-  background: cyan;
+.card-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 10px;
 }
 
-.deeppink {
-  background: deeppink;
+.card-text h1{
+  font-size: 1em;
 }
 
-.turquoise {
-  background: turquoise;
+.card-timer{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+  height: 50px;
 }
 
-.darkblue {
-  background: darkblue;
+.card-timer p{
+  font-weight: normal;
+  padding: 10px;
+  font-size: 0.8em;
 }
 
-.purple {
-  background: purple;
+.card-timer img{
+  width: 20px;
+  height: 20px;
+}
+
+.card-talking{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+.biding{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+  padding: 10px;
+}
+
+.biding img{
+  width: 40%;
+  height: 30%;
+}
+
+.biding p{
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: normal;
+  opacity: 0.6;
+}
+
+.favorite{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+}
+
+.card-hr{
+  width: 90%;
+}
+
+.favorite{
+  opacity: 0.6;
+  margin-right: 5%;
+  
+}
+
+.favorite img{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.favorite p{
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-title{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-title h1{
+  font-size: 3em;
+  font-weight: normal;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  gap: 20px;
+}
+
+.cards-wrapper{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.arrow-left, .arrow-right{
+  height: 700px;
+  width: 10px;
+  padding: 20px;
+  background: rgba(0,0,0,0.1);
+}
+
+.arrow-left{
+  left: 0;
+}
+.arrow-right{
+  right: 0;
 }

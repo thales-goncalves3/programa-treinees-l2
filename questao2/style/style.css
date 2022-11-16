@@ -64,7 +64,7 @@ a{
 }
 
 .myaccount{
-    background:linear-gradient(to top, #052766cd 5%, #1634aebc 100%);
+    background: linear-gradient(to bottom, #042460cd 5%, #4b11c7 100%);
 	background-color:#7892c2;
 	border-radius:10px;
 	text-shadow:0px 1px 0px #283966;
@@ -99,12 +99,12 @@ hr{
     width: 100%;
 }
 
-.separated-footer{
+.hr-content{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.separated-footer hr{
+.hr-content hr{
     width: 80%;
 }

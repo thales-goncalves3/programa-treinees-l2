@@ -1,8 +1,8 @@
-.infos{
+.infos {
     display: flex;
     justify-content: center;
-    padding: 2%;
-    height: 30%;
+    align-items: center;
+    height: 500px;
 }
 
 .infos-card{
@@ -10,18 +10,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 300px;
+    height: 300px;
+}
+
+.infos-card img{
+    width: 40px;
+    height: 40px;
 }
 
 .infos-card h1{
     font-size: 50px;
+    font-weight: 600;
 }
 
 .infos-card p{
     font-weight: normal;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.info-img{
-    width: 30px;
-    height: 30px;
+    opacity: 0.5;
 }

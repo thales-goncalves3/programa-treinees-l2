@@ -1,11 +1,17 @@
 const controls = document.querySelectorAll(".control");
 let currentItem = 0;
-const items = document.querySelectorAll(".item");
+let items = document.querySelectorAll(".card");
 const maxItems = items.length;
+
+console.log(controls);
 
 controls.forEach((control) => {
   control.addEventListener("click", (e) => {
     isLeft = e.target.classList.contains("arrow-left");
+
+    items.forEach((item) =>{
+      item.classList.remove("current-card");
+    })
 
     if (isLeft) {
       currentItem -= 1;
@@ -21,13 +27,12 @@ controls.forEach((control) => {
       currentItem = maxItems - 1;
     }
 
-    items.forEach((item) => item.classList.remove("current-item"));
-
+    items[currentItem].classList.add("current-card");
     items[currentItem].scrollIntoView({
       behavior: "smooth",
-      inline: "center"
+      block: 'nearest', 
+      inline: 'start'
     });
 
-    items[currentItem].classList.add("current-item");
   });
 });
